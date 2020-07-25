@@ -1,31 +1,26 @@
 module.exports = {
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-  ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
+  extends: ["eslint:recommended", "plugin:react/recommended"],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    "ecmaVersion": 11,
-    "sourceType": "module",
+    ecmaVersion: 11,
+    sourceType: "module",
   },
-  "settings": {
-    "react": {
-      "version": "detect",
+  settings: {
+    react: {
+      version: "detect",
     },
   },
-  "env": {
-    "browser": true,
-    "node": true,
-    "es2020": true,
+  env: {
+    browser: true,
+    node: true,
+    es2020: true,
   },
-  "plugins": [
-    "react",
-  ],
-  "rules": {
+  plugins: ["react"],
+  rules: {
     "react/prop-types": "off",
-    "indent": ["warn", 2],
+    indent: ["warn", 2],
   },
-  "ignorePatterns": ["!.eslintrc.js", "flayyer-*", "static"],
+  ignorePatterns: ["!.eslintrc.js", "flayyer-*", "static"],
 };

@@ -20,15 +20,15 @@ class CreateFlayyerApp extends Command {
 
   static flags = {
     // add --version flag to show CLI version
-    version: flags.version({char: 'v'}),
-    help: flags.help({char: 'h'}),
+    version: flags.version({ char: "v" }),
+    help: flags.help({ char: "h" }),
     template: flags.string({ char: "t", description: "starting template", options: CHOICES }),
   };
 
   static args = [{ name: "name", description: "output directory for templates" }];
 
   async run() {
-    const {args, flags} = this.parse(CreateFlayyerApp)
+    const { args, flags } = this.parse(CreateFlayyerApp);
 
     const response = await prompt<{ name: string; template: string }>([
       {
@@ -70,10 +70,12 @@ class CreateFlayyerApp extends Command {
 
     const SKIP_FILES = ["node_modules"];
     const replace = { name, "cli-version": "1.1.0" }; // TODO: find a way of getting this value
+    const rename = { ".npmignore": ".gitignore" }; // For some (bold) reason, npm renames .gitignores to .npmignores
     debug("replacement values: %o", replace);
+    debug("rename values: %o", rename);
     debug("skip files: %o", SKIP_FILES);
     debug("will copy and replace: %o", { from: templatePath, to: targetPath });
-    recursiveCopy(templatePath, targetPath, SKIP_FILES, replace);
+    recursiveCopy(templatePath, targetPath, SKIP_FILES, replace, rename);
 
     this.log(dedent`
       💫 Great!
@@ -98,4 +100,4 @@ class CreateFlayyerApp extends Command {
   }
 }
 
-export = CreateFlayyerApp
+export = CreateFlayyerApp;
