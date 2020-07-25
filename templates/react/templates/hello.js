@@ -1,11 +1,35 @@
 import React from "react";
 
-// Make sure to default export a React component
+import background from "../static/background.jpg";
+import logo from "../static/logo.svg";
+
+import "./styles.css"
+
+// Make sure to 'export default' a React component
 export default function Hello({ variables }) {
+  const {
+    title = "Hello world!",
+    img = background,
+    subtitle,
+  } = variables;
+
   return (
     <div>
-      <h1>Hello template</h1>
-      <pre>{JSON.stringify(variables)}</pre>
+      <div className="layer background" style={{ backgroundImage: `url(${img})` }} />
+      <div className="layer fade" />
+      <div className="layer content">
+        <img className="logo" src={logo} />
+
+        <h1 className="title">
+          {title}
+        </h1>
+
+        {subtitle && (
+          <span className="subtitle">
+            {subtitle}
+          </span>
+        )}
+      </div>
     </div>
   );
 }
