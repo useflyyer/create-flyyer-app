@@ -1,0 +1,26 @@
+{
+  "name": "flayyer-{{ name }}",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "flayyer start",
+    "build": "flayyer build",
+    "deploy": "flayyer deploy",
+    "lint": "eslint --fix '*/**/*.{js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@flayyer/cli": "^{{ cli-version }}",
+    "@types/react": "^16.9.43",
+    "@types/styled-components": "^5.1.1",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-react": "^7.20.3",
+    "typescript": "^3.9.7"
+  }
+}

@@ -1,5 +1,5 @@
 module.exports = {
-  engine: "react",
+  engine: "react-typescript",
   key: process.env.FLAYYER_KEY,
   deck: "{{ name }}",
 };
