@@ -33,11 +33,16 @@
   },
   "files": [
     "/bin",
-    "/lib"
+    "/lib",
+    "/templates",
+    "/yarn.lock",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
   ],
   "homepage": "https://github.com/flayyer/create-flayyer-app",
   "keywords": [
-    "oclif"
+    "oclif",
+    "flayyer"
   ],
   "license": "MIT",
   "main": "lib/index.js",
