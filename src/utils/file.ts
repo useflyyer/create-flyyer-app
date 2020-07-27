@@ -27,17 +27,23 @@ export function recursiveCopy(
       if (skipFiles.includes(fileName)) continue;
 
       if (stats.isFile()) {
-        // read file content and transform it using template engine
-        let contents = fs.readFileSync(origFilePath, "utf8");
-        // write file to destination folder
+        const ext = path.extname(origFilePath);
         const destFileName = rename[fileName] ? rename[fileName] : fileName;
         const writePath = path.join(targetPath, destFileName);
 
-        for (const [key, value] of Object.entries(replace)) {
-          contents = replaceAll(contents, `{{ ${key} }}`, value);
-        }
+        if ([".png", ".jpeg", ".jpg"].includes(ext)) {
+          fs.copyFileSync(origFilePath, writePath);
+        } else {
+          // read file content and transform it using template engine
+          let contents = fs.readFileSync(origFilePath, "utf8");
 
-        fs.writeFileSync(writePath, contents, "utf8");
+          for (const [key, value] of Object.entries(replace)) {
+            contents = replaceAll(contents, `{{ ${key} }}`, value);
+          }
+
+          // write file to destination folder
+          fs.writeFileSync(writePath, contents, "utf8");
+        }
       } else if (stats.isDirectory()) {
         // create folder in destination folder
         fs.mkdirSync(path.join(targetPath, fileName));
