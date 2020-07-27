@@ -11,7 +11,7 @@ npm run start
 npm run start --port 3000 --host 0.0.0.0
 ```
 
-Then preview your template at [http://localhost:7777/hello](http://localhost:7777/hello).
+Then preview your template at [http://localhost:7777/hello.html](http://localhost:7777/hello.html)
 
 ## Deployment
 
@@ -21,7 +21,7 @@ Once you are ready to deploy please remember to build the project first:
 npm run build
 ```
 
-Get your Flayyer key from [https://app.flayyer.com](https://app.flayyer.com) and set it as an environment variables:
+Get your Flayyer key from [https://app.flayyer.com](https://app.flayyer.com) and set it as an environment variable:
 
 ```sh
 export FLAYYER_KEY=...
@@ -39,10 +39,16 @@ You can find the URL for your deck in the terminal output.
 
 ### SCSS Support
 
-Sure. Install `npm install --save sass` and just import your SASS/SCSS files just like: `import "styles.scss"`.
+Sure. Install `npm install --save sass` and just import your SASS/SCSS files just like: `import "/styles.scss"`.
 
 ### Nested directories
 
 **This is not implemented yet. Please prefer a flat `/templates` directory.** This means you have to avoid folders inside `/templates`.
 
 Folders outside `/templates` is ok 👍
+
+### Development server crashes or stop previewing
+
+The development server (`npm start`) can be buggy sometimes. Please restart the server if you encounter any problems.
+
+We are working to replace it with: `flayyer-studio` (coming soon) ⚡️

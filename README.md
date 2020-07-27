@@ -30,3 +30,39 @@ USAGE
 <!-- commands -->
 
 <!-- commandsstop -->
+
+# Usage
+
+Start by invoking `create-flayyer-app`.
+
+```sh
+npx create-flayyer-app my-deck
+
+# or install it globally with:
+npm install -g create-flayyer-app
+create-flayyer-app my-deck
+```
+
+Then cd into your new created `my-deck` directory and install the dependencies.
+
+```sh
+cd my-deck
+npm install
+```
+
+Create and edit templates inside the `templates` directory.
+
+Once you are ready execute `npm run deploy` but with your API key
+
+```sh
+export FLAYYER_KEY=...
+npm run build
+npm run deploy
+```
+
+> Get your FLAYYER_KEY at [https://flayyer.com](https://flayyer.com) 👈
+
+Great! 🎉
+Now your new template deck should appear here.
+
+If you need to update your templates you can just run `npm run deploy` again.
