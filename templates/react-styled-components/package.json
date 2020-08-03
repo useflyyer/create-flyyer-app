@@ -1,5 +1,5 @@
 {
-  "name": "flayyer-{{ name }}",
+  "name": "{{ name }}",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "@flayyer/cli": "^{{ cli-version }}",
+    "@flayyer/cli": "{{ cli-version }}",
     "eslint": "^7.5.0",
     "eslint-plugin-react": "^7.20.3"
   }
