@@ -21,7 +21,7 @@ $ npm install -g create-flayyer-app
 $ create-flayyer-app COMMAND
 running command...
 $ create-flayyer-app (-v|--version|version)
-create-flayyer-app/1.1.3 darwin-x64 node-v12.16.3
+create-flayyer-app/1.1.4 darwin-x64 node-v12.16.3
 $ create-flayyer-app --help [COMMAND]
 USAGE
   $ create-flayyer-app COMMAND
