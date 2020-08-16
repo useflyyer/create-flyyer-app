@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Background, Fade, Content } from "../components/layers";
-import { Title, Subtitle } from "../components/elements"
+import { Title, Description } from "../components/elements"
 
 import background from "../static/background.jpg";
 import logo from "../static/logo.svg";
@@ -17,11 +17,11 @@ const Logo = styled.img.attrs({
 `;
 
 // Make sure to 'export default' a React component
-export default function Hello({ variables }) {
+export default function MainTemplate({ variables }) {
   const {
     title = "Hello world!",
     img = background,
-    subtitle,
+    description,
   } = variables;
 
   return (
@@ -31,8 +31,8 @@ export default function Hello({ variables }) {
       <Content>
         <Logo />
         <Title>{title}</Title>
-        {subtitle && (
-          <Subtitle>{subtitle}</Subtitle>
+        {description && (
+          <Description>{description}</Description>
         )}
       </Content>
     </>

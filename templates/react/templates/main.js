@@ -6,11 +6,11 @@ import logo from "../static/logo.svg";
 import "./styles.css"
 
 // Make sure to 'export default' a React component
-export default function Hello({ variables }) {
+export default function MainTemplate({ variables }) {
   const {
     title = "Hello world!",
     img = background,
-    subtitle,
+    description,
   } = variables;
 
   return (
@@ -24,9 +24,9 @@ export default function Hello({ variables }) {
           {title}
         </h1>
 
-        {subtitle && (
-          <span className="subtitle">
-            {subtitle}
+        {description && (
+          <span className="description">
+            {description}
           </span>
         )}
       </div>

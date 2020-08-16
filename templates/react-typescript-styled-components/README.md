@@ -11,7 +11,7 @@ npm run start
 npm run start --port 3000 --host 0.0.0.0
 ```
 
-Then preview your template at [http://localhost:7777/hello.html](http://localhost:7777/hello.html)
+Then preview your template at [http://localhost:7777/main.html](http://localhost:7777/main.html)
 
 ## Deployment
 
