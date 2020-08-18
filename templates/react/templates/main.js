@@ -15,7 +15,7 @@ export default function MainTemplate({ variables }) {
 
   return (
     <div>
-      <div className="layer background" style={{ backgroundImage: `url(${img})` }} />
+      <div className="layer background" style={{ backgroundImage: `url("${img}")` }} />
       <div className="layer fade" />
       <div className="layer content">
         <img className="logo" src={logo} />

@@ -9,7 +9,7 @@ export const Layer = styled.div`
 `
 
 export const Background = styled(Layer)`
-  background-image: url(${props => props.src});
+  background-image: url("${props => props.src}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
