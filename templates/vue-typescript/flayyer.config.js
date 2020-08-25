@@ -1,5 +1,5 @@
 module.exports = {
-  engine: "vue",
+  engine: "vue-typescript",
   key: process.env.FLAYYER_KEY,
   deck: "{{ name }}",
 };
