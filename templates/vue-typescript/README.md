@@ -43,6 +43,8 @@ You can find the URL for your deck in the terminal output.
 
 Sure. Install `npm install --save sass` and just import your SASS/SCSS files just like: `import "/styles.scss"`.
 
+In Vue.js just change `<style lang="css" scoped>` to `<style lang="scss" scoped>`.
+
 > See: https://app.flayyer.com/en/docs/structure/styles
 
 ### Custom fonts

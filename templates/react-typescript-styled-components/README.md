@@ -1,5 +1,7 @@
 # 🌠 Flayyer template
 
+Feel free to checkout the latest documentation at [app.flayyer.com/docs](http://app.flayyer.com/docs) 📖
+
 ## Development
 
 You can start a development server at [http://localhost:7777](http://localhost:7777) with:
@@ -40,6 +42,12 @@ You can find the URL for your deck in the terminal output.
 ### SCSS Support
 
 Sure. Install `npm install --save sass` and just import your SASS/SCSS files just like: `import "/styles.scss"`.
+
+> See: https://app.flayyer.com/en/docs/structure/styles
+
+### Custom fonts
+
+Refer to https://app.flayyer.com/en/docs/structure/fonts.
 
 ### Nested directories
 

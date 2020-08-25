@@ -1,0 +1,24 @@
+{
+  "name": "{{ name }}",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "flayyer start",
+    "build": "flayyer build",
+    "deploy": "flayyer deploy",
+    "lint": "eslint --fix '*/**/*.{js,jsx,ts,tsx,vue}'"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@flayyer/cli": "{{ cli-version }}",
+    "@vue/cli-plugin-eslint": "^4.5.4",
+    "@vue/component-compiler-utils": "^3.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.7.0",
+    "eslint-plugin-vue": "^7.0.0-beta.2",
+    "typescript": "^4.0.2",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
