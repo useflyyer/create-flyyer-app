@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import { Command, flags } from "@oclif/command";
 import { prompt } from "enquirer";
-import limax from "limax";
 import dedent from "dedent";
 
 import { recursiveCopy } from "./utils/file";
@@ -51,7 +50,7 @@ class CreateFlayyerApp extends Command {
     ]);
 
     const template = typeof response.template === "string" ? response.template : CHOICES[response.template];
-    const name = limax(response.name);
+    const name = slug(response.name);
     debug("will use: %o", { name, template });
 
     const CURR_DIR = process.cwd();
@@ -98,6 +97,29 @@ class CreateFlayyerApp extends Command {
     debug("exiting oclif");
     this.exit();
   }
+}
+
+// https://gist.github.com/codeguy/6684588#gistcomment-2690429
+function slug(str: string) {
+  str = str.replace(/^\s+|\s+$/g, ""); // trim
+  str = str.toLowerCase();
+
+  // remove accents, swap ñ for n, etc
+  const from = "åàáãäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  const to = "aaaaaaeeeeiiiioooouuuunc------";
+
+  for (let i = 0, l = from.length; i < l; i++) {
+    str = str.replace(new RegExp(from.charAt(i), "g"), to.charAt(i));
+  }
+
+  str = str
+    .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
+    .replace(/\s+/g, "-") // collapse whitespace and replace by -
+    .replace(/-+/g, "-") // collapse dashes
+    .replace(/^-+/, "") // trim - from start of text
+    .replace(/-+$/, ""); // trim - from end of text
+
+  return str;
 }
 
 export = CreateFlayyerApp;
