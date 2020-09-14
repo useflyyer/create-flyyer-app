@@ -10,28 +10,7 @@ Create FLAYYER app
 
 <!-- toc -->
 * [Usage](#usage)
-* [Commands](#commands)
-* [Usage](#usage-1)
-* [or install it globally with:](#or-install-it-globally-with)
 <!-- tocstop -->
-# Usage
-<!-- usage -->
-```sh-session
-$ npm install -g create-flayyer-app
-$ create-flayyer-app COMMAND
-running command...
-$ create-flayyer-app (-v|--version|version)
-create-flayyer-app/1.3.3 darwin-x64 node-v12.18.2
-$ create-flayyer-app --help [COMMAND]
-USAGE
-  $ create-flayyer-app COMMAND
-...
-```
-<!-- usagestop -->
-# Commands
-<!-- commands -->
-
-<!-- commandsstop -->
 
 # Usage
 
@@ -39,10 +18,12 @@ Start by invoking `create-flayyer-app`.
 
 ```sh
 npx create-flayyer-app my-deck
+```
 
-# or install it globally with:
-npm install -g create-flayyer-app
-create-flayyer-app my-deck
+With yarn:
+
+```sh
+yarn create flayyer-app my-deck
 ```
 
 Then cd into your new created `my-deck` directory and install the dependencies.
@@ -65,6 +46,6 @@ npm run deploy
 > Get your FLAYYER_KEY at [https://flayyer.com](https://flayyer.com) 👈
 
 Great! 🎉
-Now your new template deck should appear here.
+Now your new template deck should appear there.
 
 If you need to update your templates you can just run `npm run deploy` again.
