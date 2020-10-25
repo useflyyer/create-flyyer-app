@@ -50,7 +50,7 @@ class CreateFlayyerApp extends Command {
     ]);
 
     const template = typeof response.template === "string" ? response.template : CHOICES[response.template];
-    const name = slug(response.name);
+    const name = slugify(response.name);
     debug("will use: %o", { name, template });
 
     const CURR_DIR = process.cwd();
@@ -100,7 +100,7 @@ class CreateFlayyerApp extends Command {
 }
 
 // https://gist.github.com/codeguy/6684588#gistcomment-2690429
-function slug(str: string) {
+function slugify(str: string) {
   str = str.replace(/^\s+|\s+$/g, ""); // trim
   str = str.toLowerCase();
 
