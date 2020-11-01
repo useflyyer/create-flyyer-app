@@ -37,13 +37,17 @@ npm run deploy
 
 You can find the URL for your deck in the terminal output.
 
+## Flayyer Studio
+
+For a better development experience visit [flayyer.github.io/flayyer-studio/](https://flayyer.github.io/flayyer-studio/)
+
+![flayyer studio screenshot](https://github.com/flayyer/flayyer-studio/raw/main/.github/screenshot.png)
+
 ## FAQ & Caveats
 
 ### SCSS Support
 
 Sure. Install `npm install --save sass` and just import your SASS/SCSS files just like: `import "/styles.scss"`.
-
-In Vue.js just change `<style lang="css" scoped>` to `<style lang="scss" scoped>`.
 
 > See: https://app.flayyer.com/en/docs/structure/styles
 
@@ -60,5 +64,3 @@ Folders outside `/templates` is ok 👍
 ### Development server crashes or stop previewing
 
 The development server (`npm start`) can be buggy sometimes. Please restart the server if you encounter any problems.
-
-We are working to replace it with: `flayyer-studio` (coming soon) ⚡️
