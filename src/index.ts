@@ -91,7 +91,7 @@ class CreateFlayyerApp extends Command {
         npm run build && npm run deploy
 
       Remember to setup your 'FLAYYER_KEY' environment variable.
-      Forgot your key? Go to https://app.flayyer.com/
+      Forgot your key? Go to https://flayyer.com/
     `);
 
     debug("exiting oclif");

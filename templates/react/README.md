@@ -1,6 +1,6 @@
 # 🌠 Flayyer template
 
-Feel free to checkout the latest documentation at [app.flayyer.com/docs](http://app.flayyer.com/docs) 📖
+Feel free to checkout the latest documentation at [flayyer.com/docs](http://flayyer.com/docs) 📖
 
 ## Development
 
@@ -23,7 +23,7 @@ Once you are ready to deploy please remember to build the project first:
 npm run build
 ```
 
-Get your Flayyer key from [https://app.flayyer.com](https://app.flayyer.com) and set it as an environment variable:
+Get your Flayyer key from [https://flayyer.com](https://flayyer.com) and set it as an environment variable:
 
 ```sh
 export FLAYYER_KEY=...
@@ -49,11 +49,11 @@ For a better development experience visit [flayyer.github.io/flayyer-studio/](ht
 
 Sure. Install `npm install --save sass` and just import your SASS/SCSS files just like: `import "/styles.scss"`.
 
-> See: https://app.flayyer.com/en/docs/structure/styles
+> See: https://flayyer.com/en/docs/structure/styles
 
 ### Custom fonts
 
-Refer to https://app.flayyer.com/en/docs/structure/fonts.
+Refer to https://flayyer.com/en/docs/structure/fonts.
 
 ### Nested directories
 
