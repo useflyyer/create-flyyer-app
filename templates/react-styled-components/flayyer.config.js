@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   engine: "react",
   key: process.env.FLAYYER_KEY,

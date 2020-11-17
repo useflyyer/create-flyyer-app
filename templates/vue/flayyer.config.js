@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   engine: "vue",
   key: process.env.FLAYYER_KEY,
