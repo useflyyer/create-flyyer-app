@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@flayyer/cli": "{{ cli-version }}",
+    "@flayyer/flayyer-types": "^1.1.0",
     "@vue/cli-plugin-eslint": "^4.5.9",
     "@vue/component-compiler-utils": "^3.2.0",
     "babel-eslint": "^10.1.0",

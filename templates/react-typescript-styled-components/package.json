@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@flayyer/cli": "{{ cli-version }}",
+    "@flayyer/flayyer-types": "^1.1.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^4.8.1",

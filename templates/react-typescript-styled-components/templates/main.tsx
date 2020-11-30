@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { TemplateProps } from "@flayyer/flayyer-types";
 
 import { Background, Fade, Content } from "../components/layers";
 import { Title, Description } from "../components/elements"
@@ -17,7 +18,7 @@ const Logo = styled.img.attrs({
 `;
 
 // Make sure to 'export default' a React component
-export default function MainTemplate({ variables }) {
+export default function MainTemplate({ variables }: TemplateProps) {
   const {
     title = "Hello world!",
     img = background,
