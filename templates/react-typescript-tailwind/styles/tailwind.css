@@ -1,0 +1,13 @@
+/* Tailwind */
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* Custom */
+
+.filter-white {
+  filter: brightness(0) invert(1);
+}
