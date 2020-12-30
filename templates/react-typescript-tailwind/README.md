@@ -1,6 +1,6 @@
 # 🌠 Flayyer template
 
-Feel free to checkout the latest documentation at [flayyer.com/docs](http://flayyer.com/docs) 📖
+Feel free to checkout the latest documentation at [docs.flayyer.com](https://docs.flayyer.com) 📖
 
 ## Development
 
@@ -19,7 +19,7 @@ Then preview your template at [http://localhost:7777/main.html](http://localhost
 
 Once you are ready to deploy please remember to build the project first:
 
-**When using Tailwind CSS it is important to set `NODE_ENV` to `production`. Otherwise unused styles wont be purged.**
+**When using Tailwind CSS it is important to set `NODE_ENV` to production. Otherwise unused styles wont be purged.**
 
 ```sh
 export NODE_ENV=production
@@ -52,11 +52,11 @@ For a better development experience visit [flayyer.github.io/flayyer-studio/](ht
 
 Sure. Install `npm install --save sass` and just import your SASS/SCSS files just like: `import "/styles.scss"`.
 
-> See: https://flayyer.com/en/docs/structure/styles
+> See: https://docs.flayyer.com/docs/features/styles
 
 ### Custom fonts
 
-Refer to https://flayyer.com/en/docs/structure/fonts.
+Refer to https://docs.flayyer.com/docs/features/fonts.
 
 ### Nested directories
 
