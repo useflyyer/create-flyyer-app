@@ -19,7 +19,7 @@ Then preview your template at [http://localhost:7777/main.html](http://localhost
 
 Once you are ready to deploy please remember to build the project first:
 
-**When using Tailwind CSS it is important to set `NODE_ENV` to production. Otherwise unused styles wont be purged.**
+**When using Tailwind CSS it is important to set `NODE_ENV` to `production`. Otherwise unused styles wont be purged.**
 
 ```sh
 export NODE_ENV=production
