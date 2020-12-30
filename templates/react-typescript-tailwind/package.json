@@ -1,5 +1,5 @@
 {
-  "name": "probando-tailwind",
+  "name": "{{ name }}",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
-    "@flayyer/cli": "^1.8.0",
+    "@flayyer/cli": "{{ cli-version }}",
     "@flayyer/flayyer-types": "^1.1.0",
     "@types/classnames": "^2.2.11",
     "@types/react": "^17.0.0",
