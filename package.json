@@ -1,7 +1,7 @@
 {
   "name": "create-flayyer-app",
   "description": "Create FLAYYER app",
-  "version": "1.10.2",
+  "version": "1.10.3",
   "author": "Patricio López Juri @lopezjurip",
   "bin": {
     "create-flayyer-app": "./bin/run"
