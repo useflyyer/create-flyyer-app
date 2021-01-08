@@ -6,7 +6,18 @@
     "module": "commonjs",
     "outDir": "lib",
     "rootDir": "src",
+    "alwaysStrict": true,
     "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "preserveConstEnums": true,
     "target": "es2017"
   },
   "include": [

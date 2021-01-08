@@ -1,12 +1,13 @@
 import fs from "fs";
 import path from "path";
 
+// eslint-disable-next-line max-params
 export function recursiveCopy(
   templatePath: string,
   targetPath: string,
   skipFiles: string[],
-  replace: { [key: string]: string },
-  rename: { [key: string]: string }, // only files for now
+  replace: Record<string, string>,
+  rename: Record<string, string>, // only files for now
 ) {
   function replaceAll(string: string, search: string, replace: string) {
     return string.split(search).join(replace);
@@ -28,7 +29,7 @@ export function recursiveCopy(
 
       if (stats.isFile()) {
         const ext = path.extname(origFilePath);
-        const destFileName = rename[fileName] ? rename[fileName] : fileName;
+        const destFileName = rename[fileName] ? rename[fileName]! : fileName;
         const writePath = path.join(targetPath, destFileName);
 
         if ([".png", ".jpeg", ".jpg"].includes(ext)) {

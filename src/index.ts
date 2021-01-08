@@ -53,7 +53,11 @@ class CreateFlayyerApp extends Command {
 
     const template = typeof response.template === "string" ? response.template : CHOICES[response.template];
     const name = slugify(response.name);
-    debug("will use: %o", { name, template });
+    if (template) {
+      debug("will use: %o", { name, template });
+    } else {
+      this.error("Missing or invalid template");
+    }
 
     const CURR_DIR = process.cwd();
     const templatePath = path.join(TEMPLATES_DIR, template);
