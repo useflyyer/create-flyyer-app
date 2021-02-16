@@ -47,7 +47,7 @@ npm run build
 npm run deploy
 ```
 
-> Get your FLAYYER_KEY at [https://flayyer.com/settings/keys](https://flayyer.com/settings/keys) 👈
+> Get your FLAYYER_KEY at [https://flayyer.com/dashboard/_/settings](https://flayyer.com/dashboard/_/settings) 👈
 
 Great! 🎉
 Now your new template deck should appear there.
