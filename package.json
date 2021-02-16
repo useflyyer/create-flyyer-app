@@ -50,25 +50,25 @@
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
-    "@oclif/plugin-help": "^3.2.1",
+    "@oclif/plugin-help": "^3.2.2",
     "debug": "^4.3.1",
     "dedent": "^0.7.0",
     "enquirer": "^2.3.6",
     "tslib": "^2.1.0"
   },
   "devDependencies": {
-    "@flayyer/eslint-config": "^1.0.3",
+    "@flayyer/eslint-config": "^1.0.4",
     "@oclif/dev-cli": "^1.26.0",
     "@types/debug": "^4.1.5",
     "@types/dedent": "^0.7.0",
-    "@types/node": "^14.14.21",
-    "eslint": "^7.17.0",
+    "@types/node": "^14.14.28",
+    "eslint": "^7.20.0",
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.2.0",
     "husky": "^4.3.7",
-    "lint-staged": "^10.5.3",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.5"
   }
 }
