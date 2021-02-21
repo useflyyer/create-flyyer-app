@@ -1,7 +1,7 @@
 create-flayyer-app
 ==================
 
-[![Flayyer logo](./.github/assets/logo.png)](https://flayyer.com?ref=create-flayyer-app)
+[![Demo of link previews using Flayyer](./.github/assets/agents.png)](https://flayyer.com?ref=create-flayyer-app)
 
 **Create [Flayyer.com](https://flayyer.com?ref=create-flayyer-app) app**
 
@@ -53,3 +53,5 @@ Great! 🎉
 Now your new template deck should appear there.
 
 If you need to update your templates you can just run `npm run deploy` again.
+
+[![Flayyer logo](./.github/assets/logo.png)](https://flayyer.com?ref=create-flayyer-app)
