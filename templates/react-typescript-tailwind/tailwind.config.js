@@ -1,4 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   purge: {
@@ -18,7 +19,7 @@ module.exports = {
       "./styles/**/*.less",
     ],
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, // or "media" or "class"
   theme: {
     screens: {
       // For apps where images are always small squares such as WhatsApp
