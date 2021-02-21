@@ -17,6 +17,8 @@
   "devDependencies": {
     "@flayyer/cli": "{{ cli-version }}",
     "@flayyer/flayyer-types": "^1.1.0",
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
     "@types/classnames": "^2.2.11",
     "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
@@ -25,6 +27,7 @@
     "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
     "eslint-plugin-react": "^7.20.3",
+    "parcel-bundler": "^1.12.4",
     "postcss": "^7",
     "typescript": "^4.1.2"
   }
