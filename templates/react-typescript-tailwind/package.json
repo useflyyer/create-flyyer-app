@@ -6,29 +6,39 @@
     "start": "flayyer start",
     "build": "flayyer build",
     "deploy": "flayyer deploy",
-    "lint": "eslint --fix '*/**/*.{js,jsx,ts,tsx}'"
+    "test": "xo --fix"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
+    "@flayyer/flayyer-types": "^1.7.1",
+    "clsx": "^1.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@flayyer/cli": "{{ cli-version }}",
-    "@flayyer/flayyer-types": "^1.1.0",
-    "@fullhuman/postcss-purgecss": "^4.0.0",
-    "@tailwindcss/postcss7-compat": "^2.0.3",
-    "@types/classnames": "^2.2.11",
-    "@types/react": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.8.1",
-    "@typescript-eslint/parser": "^4.8.1",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@tailwindcss/postcss7-compat": "^2.1.0",
+    "@types/react": "^17.0.3",
+    "@types/styled-components": "^5.1.9",
     "autoprefixer": "^9",
     "dotenv": "^8.2.0",
-    "eslint": "^7.14.0",
-    "eslint-plugin-react": "^7.20.3",
-    "parcel-bundler": "^1.12.4",
+    "eslint-config-xo-react": "^0.25.0",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^7",
-    "typescript": "^4.1.2"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "^4.2.4",
+    "xo": "^0.38.2"
+  },
+  "xo": {
+    "prettier": true,
+    "space": 2,
+    "extends": "xo-react",
+    "rules": {
+      "no-unused-vars": "off",
+      "react/prop-types": "off",
+      "react/function-component-definition": "off"
+    }
   }
 }

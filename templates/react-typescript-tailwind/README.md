@@ -13,23 +13,30 @@ npm run start
 npm run start --port 3000 --host 0.0.0.0
 ```
 
-Then preview your template at [http://localhost:7777/main.html](http://localhost:7777/main.html)
+Then preview your template at [https://flayyer.github.io/flayyer-studio](https://flayyer.github.io/flayyer-studio)
+
+![flayyer-studio screenshot](https://raw.githubusercontent.com/flayyer/flayyer-studio/main/.github/screenshot.png)
 
 ## Deployment
 
-Once you are ready to deploy please remember to build the project first:
-
-**When using Tailwind CSS it is important to set `NODE_ENV` to `production`. Otherwise unused styles wont be purged.**
+Once you are ready to deploy to production please remember to build the project first:
 
 ```sh
-export NODE_ENV=production
-npm run build
+NODE_ENV=production npm run build
 ```
 
-Get your Flayyer key from [https://flayyer.com](https://flayyer.com) and set it as an environment variable:
+Get your Flayyer key from [https://flayyer.com/dashboard/_/settings](https://flayyer.com/dashboard/_/settings) and set it as an environment variable:
 
 ```sh
+# in your terminal
 export FLAYYER_KEY=...
+```
+
+Alternatively you can create a `.env` file:
+
+```sh
+# .env
+FLAYYER_KEY=...
 ```
 
 Deploy to production
@@ -38,15 +45,13 @@ Deploy to production
 npm run deploy
 ```
 
-You can find the URL for your deck in the terminal output.
-
-## Flayyer Studio
-
-For a better development experience visit [flayyer.github.io/flayyer-studio/](https://flayyer.github.io/flayyer-studio/)
-
-![flayyer studio screenshot](https://github.com/flayyer/flayyer-studio/raw/main/.github/screenshot.png)
+You can find the live URL for your deck in the terminal output, it is something like: `https://flayyer.io/v2/tenant/deck/template`.
 
 ## FAQ & Caveats
+
+### What is Flayyer studio?
+
+It's a browser app that opens your local server (localhost:7777) in multiple _iframes_ so you can have a better developer experience. It works best on Firefox.
 
 ### SCSS Support
 
@@ -56,7 +61,7 @@ Sure. Install `npm install --save sass` and just import your SASS/SCSS files jus
 
 ### Custom fonts
 
-Refer to https://docs.flayyer.com/docs/features/fonts.
+Refer to https://docs.flayyer.com/docs/features/fonts. If you are building a template for the marketplace and want to support on-the-fly fonts you can use: [flayyer/use-googlefonts](https://github.com/flayyer/use-googlefonts).
 
 ### Nested directories
 
@@ -66,4 +71,8 @@ Folders outside `/templates` is ok 👍
 
 ### Development server crashes or stop previewing
 
-The development server (`npm start`) can be buggy sometimes. Please restart the server if you encounter any problems.
+The development server (`npm run start`) can be buggy sometimes. Please restart the server if you encounter any problems.
+
+---
+
+> Default image credits: [Photo by Osvaldo Castillo from Pexels](https://images.pexels.com/photos/3402313/pexels-photo-3402313.jpeg)
