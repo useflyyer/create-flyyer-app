@@ -1,12 +1,9 @@
 create-flayyer-app
 ==================
 
-[result-1]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=try+changing+this
-[result-2]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=awesome!+😃+description=Optional+description
+![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-1.png?raw=true)
 
-[![Resultant flayyer live image](/.github/assets/result-1.png)][result-1]
-
-[![Resultant flayyer live image](/.github/assets/result-2.png)][result-2]
+![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-2.png?raw=true)
 
 **Create [Flayyer.com](https://flayyer.com?ref=create-flayyer-app) app**
 
@@ -28,7 +25,7 @@ create-flayyer-app
 Start by invoking `create-flayyer-app`.
 
 ```sh
-npx create-flayyer-app my-project
+npm init flayyer-app@latest my-project
 ```
 
 With yarn:

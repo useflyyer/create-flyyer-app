@@ -47,6 +47,19 @@ npm run deploy
 
 You can find the live URL for your deck in the terminal output, it is something like: `https://flayyer.io/v2/tenant/deck/template`.
 
+## Usage
+
+Append queryparams to your URLs and we will set those as props when rendering.
+
+![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-1.png?raw=true)
+
+![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-2.png?raw=true)
+
+Next steps:
+
+* Use our official libraries to format URLs https://docs.flayyer.com/docs/libraries
+* Read our guides to integrate this into your software: https://docs.flayyer.com/guides
+
 ## FAQ & Caveats
 
 ### What is Flayyer studio?
