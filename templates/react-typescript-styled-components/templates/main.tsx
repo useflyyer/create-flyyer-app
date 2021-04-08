@@ -1,29 +1,26 @@
-import React from "react"
-import styled from "styled-components"
-import { TemplateProps } from "@flayyer/flayyer-types";
+import React from "react";
+import styled from "styled-components";
+import {TemplateProps} from "@flayyer/flayyer-types";
 
-import { Background, Fade, Content } from "../components/layers";
-import { Title, Description } from "../components/elements"
+import {Background, Fade, Content} from "../components/layers";
+import {Title, Description} from "../components/elements";
 
-import background from "../static/background.jpg";
+import background from "../static/background.jpeg";
 import logo from "../static/logo.svg";
 
 const Logo = styled.img.attrs({
-  src: logo
+  src: logo,
 })`
-  width: 120px;
-  height: 120px;
+  width: 280px;
+  margin: 1.4rem;
   /* Apply white filter */
   filter: brightness(0) invert(1);
 `;
 
 // Make sure to 'export default' a React component
-export default function MainTemplate({ variables }: TemplateProps) {
-  const {
-    title = "Hello world!",
-    img = background,
-    description,
-  } = variables;
+export default function MainTemplate(props: TemplateProps) {
+  const {width, height, variables} = props;
+  const {title = "Created with React.js", img = background, description} = variables;
 
   return (
     <>
@@ -32,9 +29,7 @@ export default function MainTemplate({ variables }: TemplateProps) {
       <Content>
         <Logo />
         <Title>{title}</Title>
-        {description && (
-          <Description>{description}</Description>
-        )}
+        {description && <Description>{description}</Description>}
       </Content>
     </>
   );

@@ -1,8 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+const {config} = require("@flayyer/flayyer-types");
 require("dotenv").config();
 
-module.exports = {
+module.exports = config({
   engine: "react-typescript",
   key: process.env.FLAYYER_KEY,
   deck: "{{ name }}",
-};
+
+  // Optionals
+  name: "My Deck",
+  description: "Created with create-flayyer-app",
+});

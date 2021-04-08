@@ -1,13 +1,11 @@
-/* Tailwind */
-
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
-/* Custom */
-
-.filter-white {
-  filter: brightness(0) invert(1);
+/*
+ * Most of the tailwindcss styles are defined with `rem` units which depends on the global font-size.
+ * The default is 16px but we think 52px is a better value for Flayyer templates. Feel free to try different values.
+ */
+html {
+  font-size: 52px;
 }

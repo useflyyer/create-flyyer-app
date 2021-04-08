@@ -6,16 +6,29 @@
     "start": "flayyer start",
     "build": "flayyer build",
     "deploy": "flayyer deploy",
-    "lint": "eslint --fix '*/**/*.{js,jsx,ts,tsx}'"
+    "test": "xo --fix"
   },
   "dependencies": {
+    "@flayyer/flayyer-types": "^1.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@flayyer/cli": "{{ cli-version }}",
     "dotenv": "^8.2.0",
-    "eslint": "^7.14.0",
-    "eslint-plugin-react": "^7.20.3"
+    "eslint-config-xo-react": "^0.25.0",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "xo": "^0.38.2"
+  },
+  "xo": {
+    "prettier": true,
+    "space": 2,
+    "extends": "xo-react",
+    "rules": {
+      "no-unused-vars": "off",
+      "react/prop-types": "off",
+      "react/function-component-definition": "off"
+    }
   }
 }
