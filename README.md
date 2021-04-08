@@ -1,11 +1,18 @@
 create-flayyer-app
 ==================
 
-[![Demo of link previews using Flayyer](./.github/assets/agents.png)](https://flayyer.com?ref=create-flayyer-app)
+[result-1]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=try+changing+this
+[result-2]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=awesome!+😃+description=Optional+description
+
+[![Resultant flayyer live image](/.github/assets/result-1.png)][result-1]
+
+[![Resultant flayyer live image](/.github/assets/result-2.png)][result-2]
 
 **Create [Flayyer.com](https://flayyer.com?ref=create-flayyer-app) app**
 
 📚 Please read the documentation here: [https://docs.flayyer.com/docs/](https://docs.flayyer.com/docs/)
+
+
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/create-flayyer-app.svg)](https://npmjs.org/package/create-flayyer-app)
@@ -54,4 +61,10 @@ Now your new template deck should appear there.
 
 If you need to update your templates you can just run `npm run deploy` again.
 
-[![Flayyer logo](./.github/assets/logo.png)](https://flayyer.com?ref=create-flayyer-app)
+## Dynamic og:image
+
+You can use the resulting URLs to create dynamic `<meta property="og:image" />` for your websites.
+
+See the official guides: https://docs.flayyer.com/guides
+
+[![Demo of link previews using Flayyer](./.github/assets/agents.png)](https://flayyer.com?ref=create-flayyer-app)
