@@ -15,7 +15,7 @@ npm run start --port 3000 --host 0.0.0.0
 
 Then preview your template at [https://flayyer.github.io/flayyer-studio](https://flayyer.github.io/flayyer-studio)
 
-![flayyer-studio screenshot](https://raw.githubusercontent.com/flayyer/flayyer-studio/main/.github/screenshot.png)
+[![flayyer-studio screenshot](https://raw.githubusercontent.com/flayyer/flayyer-studio/main/.github/screenshot.png)](https://flayyer.github.io/flayyer-studio)
 
 ## Deployment
 

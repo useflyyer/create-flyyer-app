@@ -41,12 +41,21 @@ cd my-project
 npm install
 ```
 
-Create and edit templates inside the `templates` directory.
+Create and edit templates inside the `templates` directory. Run the local server with:
+
+```sh
+npm run start
+```
+
+Then preview your template at [https://flayyer.github.io/flayyer-studio](https://flayyer.github.io/flayyer-studio)
+
+[![flayyer-studio screenshot](https://raw.githubusercontent.com/flayyer/flayyer-studio/main/.github/screenshot.png)](https://flayyer.github.io/flayyer-studio)
 
 Once you are ready execute `npm run deploy` but with your API key
 
 ```sh
 export FLAYYER_KEY=...
+export NODE_ENV=production
 npm run build
 npm run deploy
 ```
