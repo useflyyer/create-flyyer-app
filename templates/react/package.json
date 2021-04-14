@@ -25,6 +25,7 @@
     "prettier": true,
     "space": 2,
     "extends": "xo-react",
+    "ignores": [".flayyer-*"],
     "rules": {
       "no-unused-vars": "off",
       "react/prop-types": "off",
