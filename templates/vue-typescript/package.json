@@ -28,6 +28,7 @@
     "prettier": true,
     "space": 2,
     "extends": "xo-vue",
+    "ignores": [".flayyer-*"],
     "extensions": [
       "js",
       "vue"
