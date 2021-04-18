@@ -8,7 +8,7 @@ import background from "../static/background.jpeg";
 import logo from "../static/logo.svg";
 
 function Layer({className, ...props}: React.ComponentPropsWithoutRef<"div">) {
-  return <div {...props} className={clsx("absolute inset-0", className)} />;
+  return <div {...props} className={clsx("absolute inset-0 w-full h-full", className)} />;
 }
 
 // Make sure to 'export default' a React component
