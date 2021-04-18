@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Title = styled.h1`
   margin: 0;
   color: #ffffff;
-  font-family: "Roboto", Arial;
+  font-family: 'Roboto', Arial;
   font-size: 6rem;
   text-align: center;
 
@@ -26,7 +26,7 @@ export const Title = styled.h1`
 export const Description = styled.h2`
   margin: 1rem 0 0 0;
   color: #ffffff;
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-size: 3rem;
   letter-spacing: 3px;
   text-align: center;

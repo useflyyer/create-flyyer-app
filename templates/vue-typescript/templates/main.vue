@@ -15,24 +15,24 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue';
 
-import background from "../static/background.jpeg";
-import logo from "../static/logo.svg";
+import background from '../static/background.jpeg';
+import logo from '../static/logo.svg';
 
 export default Vue.extend({
   props: {
-    variables: {type: Object, default: () => ({})},
+    variables: {type: Object, default: () => ({})}
   },
 
   data() {
     const defaults = {
-      title: "Created with Vue",
+      title: 'Created with Vue.js',
       logo,
-      img: background,
+      img: background
     };
     return {...defaults, ...this.variables};
-  },
+  }
 });
 </script>
 
@@ -43,8 +43,6 @@ export default Vue.extend({
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .background {
@@ -54,7 +52,11 @@ export default Vue.extend({
 }
 
 .fade {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.65) 100%
+  );
 }
 
 .content {
@@ -76,7 +78,7 @@ export default Vue.extend({
 .title {
   margin: 0;
   color: #ffffff;
-  font-family: "Roboto", Arial;
+  font-family: 'Roboto', Arial;
   font-size: 6rem;
   text-align: center;
 }
@@ -84,7 +86,7 @@ export default Vue.extend({
 .description {
   margin: 1rem 0 0 0;
   color: #ffffff;
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-size: 3rem;
   letter-spacing: 3px;
   text-align: center;

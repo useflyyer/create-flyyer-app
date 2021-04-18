@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Layer = styled.div`
   position: absolute;
@@ -6,19 +6,21 @@ export const Layer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
 `;
 
 export const Background = styled(Layer)`
-  background-image: url("${(props) => props.src}");
+  background-image: url('${(props) => props.src}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 `;
 
 export const Fade = styled(Layer)`
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.65) 100%
+  );
 `;
 
 export const Content = styled(Layer)`

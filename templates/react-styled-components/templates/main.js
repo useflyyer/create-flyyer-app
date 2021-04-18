@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import {TemplateProps} from "@flayyer/flayyer-types";
+import React from 'react';
+import styled from 'styled-components';
+import {TemplateProps} from '@flayyer/flayyer-types';
 
-import {Background, Fade, Content} from "../components/layers.js";
-import {Title, Description} from "../components/elements.js";
+import {Background, Fade, Content} from '../components/layers';
+import {Title, Description} from '../components/elements';
 
-import background from "../static/background.jpeg";
-import logo from "../static/logo.svg";
+import background from '../static/background.jpeg';
+import logo from '../static/logo.svg';
 
 const Logo = styled.img.attrs({
-  src: logo,
+  src: logo
 })`
   width: 280px;
   margin: 1.4rem;
@@ -23,7 +23,11 @@ const Logo = styled.img.attrs({
  */
 export default function MainTemplate(props) {
   const {width, height, variables} = props;
-  const {title = "Created with React.js", img = background, description} = variables;
+  const {
+    title = 'Created with React.js',
+    img = background,
+    description
+  } = variables;
 
   return (
     <>

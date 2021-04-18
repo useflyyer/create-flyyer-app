@@ -1,12 +1,12 @@
-const {config} = require("@flayyer/flayyer-types");
-require("dotenv").config();
+const {config} = require('@flayyer/flayyer-types');
+require('dotenv').config();
 
 module.exports = config({
-  engine: "react-typescript",
+  engine: 'react-typescript',
   key: process.env.FLAYYER_KEY,
-  deck: "{{ name }}",
+  deck: '{{ name }}',
 
   // Optionals
-  name: "My Deck",
-  description: "Created with create-flayyer-app",
+  name: 'My Deck',
+  description: 'Created with create-flayyer-app'
 });
