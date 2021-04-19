@@ -74,7 +74,7 @@ class CreateFlayyerApp extends Command {
     fs.mkdirSync(targetPath);
 
     const SKIP_FILES = ["node_modules"];
-    const replace = { name: name, "cli-version": "^1.14.0" }; // TODO: find a way of getting this value
+    const replace = { name: name, "cli-version": "^1.15.0" }; // TODO: find a way of getting this value
     const rename = { ".npmignore": ".gitignore" }; // For some (bold) reason, npm renames .gitignores to .npmignores
     debug("replacement values: %o", replace);
     debug("rename values: %o", rename);
