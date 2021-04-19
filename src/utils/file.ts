@@ -8,7 +8,7 @@ export function recursiveCopy(
   skipFiles: string[],
   replace: Record<string, string>,
   rename: Record<string, string>, // only files for now
-) {
+): void {
   function replaceAll(string: string, search: string, replace: string) {
     return string.split(search).join(replace);
   }
@@ -32,7 +32,7 @@ export function recursiveCopy(
         const destFileName = rename[fileName] ? rename[fileName]! : fileName;
         const writePath = path.join(targetPath, destFileName);
 
-        if ([".png", ".jpeg", ".jpg"].includes(ext)) {
+        if ([".png", ".jpeg", ".jpg", ".svg"].includes(ext)) {
           fs.copyFileSync(origFilePath, writePath);
         } else {
           // read file content and transform it using template engine
