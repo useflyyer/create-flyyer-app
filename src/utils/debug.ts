@@ -1,7 +1,7 @@
 import createDebug, { Debugger } from "debug";
 
 /**
- * To enable use: `DEBUG=notabene:* yarn dev`
+ * To enable use: `DEBUG=flayyer:* yarn dev`
  */
 export const base: Debugger = createDebug("flayyer:create-flayyer-app");
 
