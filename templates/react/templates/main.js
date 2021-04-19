@@ -14,7 +14,7 @@ export default function MainTemplate(props) {
   const {width, height, variables} = props;
   const {
     title = 'Created with React.js',
-    img = background,
+    image = background,
     description
   } = variables;
 
@@ -22,7 +22,7 @@ export default function MainTemplate(props) {
     <div>
       <div
         className="layer background"
-        style={{backgroundImage: `url("${img}")`}}
+        style={{backgroundImage: `url("${image}")`}}
       />
       <div className="layer fade" />
       <div className="layer content">

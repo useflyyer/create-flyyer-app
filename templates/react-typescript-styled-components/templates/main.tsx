@@ -22,13 +22,13 @@ export default function MainTemplate(props: TemplateProps) {
   const {width, height, variables} = props;
   const {
     title = 'Created with React.js',
-    img = background,
+    image = background,
     description
   } = variables;
 
   return (
     <>
-      <Background src={img} />
+      <Background src={image} />
       <Fade />
       <Content>
         <Logo />

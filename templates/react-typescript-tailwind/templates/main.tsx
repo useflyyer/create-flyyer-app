@@ -21,14 +21,14 @@ export default function MainTemplate(props: TemplateProps) {
   const {width, height, variables} = props;
   const {
     title = 'Created with React.js',
-    img = background,
+    image = background,
     description
   } = variables;
 
   return (
     <>
       <Layer>
-        <img className="w-full h-full object-cover" src={img} />
+        <img className="w-full h-full object-cover" src={image} />
       </Layer>
       <Layer className="bg-gradient-to-t from-black opacity-0 banner:opacity-60" />
       <Layer className="flex flex-col justify-center items-center px-4 py-4 text-white text-center">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="layer background" :style="{backgroundImage: `url(${img})`}" />
+    <div class="layer background" :style="{backgroundImage: `url(${image})`}" />
     <div class="layer fade" />
     <div class="layer content">
       <img class="logo" :src="logo" />
@@ -26,14 +26,19 @@ export default Vue.extend({
     height: {type: Number, required: true},
     variables: {type: Object, default: () => ({})}
   },
-
-  data() {
-    const defaults = {
-      title: 'Created with Vue.js',
-      logo,
-      img: background
-    };
-    return {...defaults, ...this.variables};
+  computed: {
+    title() {
+      return this.variables.title || 'Created with Vue.js';
+    },
+    description() {
+      return this.variables.description;
+    },
+    logo() {
+      return this.variables.logo || logo;
+    },
+    image() {
+      return this.variables.image || background;
+    }
   }
 });
 </script>

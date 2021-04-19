@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="layer background" :style="{backgroundImage: `url(${img})`}" />
+    <div class="layer background" :style="{backgroundImage: `url(${image})`}" />
     <div class="layer fade" />
     <div class="layer content">
       <img class="logo" :src="logo" />
@@ -15,23 +15,37 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropType } from 'vue';
+import {TemplateProps} from '@flayyer/flayyer-types';
 
 import background from '../static/background.jpeg';
 import logo from '../static/logo.svg';
 
+interface Variables {
+  title: string;
+  description: string;
+  logo: string;
+  image: string;
+}
 export default Vue.extend({
   props: {
-    variables: {type: Object, default: () => ({})}
+    width: {type: Number, required: true},
+    height: {type: Number, required: true},
+    variables: {type: Object as PropType<TemplateProps<Variables>["variables"]>, default: () => ({})},
   },
-
-  data() {
-    const defaults = {
-      title: 'Created with Vue.js',
-      logo,
-      img: background
-    };
-    return {...defaults, ...this.variables};
+  computed: {
+    title() {
+      return this.variables.title || 'Created with Vue.js';
+    },
+    description() {
+      return this.variables.description;
+    },
+    logo() {
+      return this.variables.logo || logo;
+    },
+    image() {
+      return this.variables.image || background;
+    }
   }
 });
 </script>
