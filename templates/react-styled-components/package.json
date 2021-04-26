@@ -1,5 +1,5 @@
 {
-  "name": "{{ slug }}",
+  "name": "{{ replace-slug }}",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "@flayyer/cli": "{{ cli-version }}",
+    "@flayyer/cli": "{{ replace-cli-version }}",
     "dotenv": "^8.2.0",
     "eslint-config-xo-react": "^0.25.0",
     "eslint-plugin-react": "^7.23.1",

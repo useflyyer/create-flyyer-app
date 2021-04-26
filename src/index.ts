@@ -78,10 +78,10 @@ class CreateFlayyerApp extends Command {
 
     const SKIP_FILES = ["node_modules", ".flayyer-cache", ".flayyer-dist", ".flayyer-processed", ".flayyer-dev"];
     const replace = {
-      slug: slug,
-      title: titleCase(slug),
-      "cli-version": "^1.15.0", // TODO: find a way of getting this value
-      "create-version": this.config.version,
+      "replace-slug": slug,
+      "replace-title": titleCase(slug),
+      "replace-cli-version": "^1.15.0", // TODO: find a way of getting this value
+      "replace-create-version": this.config.version,
     };
     const rename = { ".npmignore": ".gitignore" }; // For some (bold) reason, npm renames .gitignores to .npmignores
     debug("replacement values: %o", replace);

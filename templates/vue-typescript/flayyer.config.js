@@ -1,4 +1,4 @@
-// Created with create-flayyer-app@{{ create-version }}
+// Created with create-flayyer-app@{{ replace-create-version }}
 
 const {config} = require('@flayyer/flayyer-types');
 require('dotenv').config();
@@ -6,9 +6,9 @@ require('dotenv').config();
 module.exports = config({
   engine: 'vue-typescript',
   key: process.env.FLAYYER_KEY,
-  deck: '{{ slug }}',
+  deck: '{{ replace-slug }}',
 
   // Optionals
-  name: '{{ title }}',
+  name: '{{ replace-title }}',
   description: 'Created with create-flayyer-app'
 });

@@ -1,4 +1,4 @@
-# 🌠 {{ title }}
+# 🌠 {{ replace-title }}
 
 Feel free to checkout the latest documentation at [docs.flayyer.com](https://docs.flayyer.com) 📖
 
