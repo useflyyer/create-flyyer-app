@@ -6,7 +6,7 @@
     "start": "flayyer start",
     "build": "flayyer build",
     "deploy": "flayyer deploy",
-    "test": "xo --fix"
+    "format": "xo --fix"
   },
   "dependencies": {
     "@flayyer/flayyer-types": "^1.7.1",
