@@ -9,7 +9,8 @@
     "format": "xo --fix"
   },
   "dependencies": {
-    "@flayyer/flayyer-types": "^1.7.1",
+    "@flayyer/flayyer-types": "^1.11.0",
+    "@flayyer/variables": "^1.1.2",
     "clsx": "^1.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -17,8 +18,8 @@
   "devDependencies": {
     "@flayyer/cli": "{{ replace-cli-version }}",
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@tailwindcss/postcss7-compat": "^2.1.0",
-    "@types/react": "^17.0.3",
+    "@tailwindcss/postcss7-compat": "^2.1.2",
+    "@types/react": "^17.0.4",
     "autoprefixer": "^9",
     "dotenv": "^8.2.0",
     "eslint-config-xo-react": "^0.25.0",
@@ -27,16 +28,18 @@
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.2.4",
-    "xo": "^0.38.2"
+    "xo": "^0.39.1"
   },
   "xo": {
     "prettier": true,
     "space": 2,
     "extends": "xo-react",
     "rules": {
+      "new-cap": "off",
       "no-unused-vars": "off",
       "react/prop-types": "off",
-      "react/function-component-definition": "off"
+      "react/function-component-definition": "off",
+      "@typescript-eslint/no-unused-vars": "off"
     }
   }
 }

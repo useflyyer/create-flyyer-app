@@ -1,21 +1,28 @@
 import React from 'react';
-import styled from 'styled-components';
+import {Variable as V, Validator} from '@flayyer/variables';
 import {TemplateProps} from '@flayyer/flayyer-types';
 
-import {Background, Fade, Content} from '../components/layers';
-import {Title, Description} from '../components/elements';
+import {Background, Fade, Content} from '../components/layers.js';
+import {Title, Description} from '../components/elements.js';
+import {Logo} from '../components/logo.js';
 
 import background from '../static/background.jpeg';
-import logo from '../static/logo.svg';
+import alternative from '../static/alternative.jpeg';
 
-const Logo = styled.img.attrs({
-  src: logo
-})`
-  width: 280px;
-  margin: 1.4rem;
-  /* Apply white filter */
-  filter: brightness(0) invert(1);
-`;
+/**
+ * Export to enable variables UI on Flayyer.com
+ */
+export const schema = V.Object({
+  title: V.String({default: 'Created with React.js'}),
+  description: V.Optional(V.String()),
+  image: V.Image({
+    title: 'Background image URL',
+    examples: [alternative],
+    default: background
+  })
+});
+
+const validator = new Validator(schema);
 
 /**
  * Make sure to default export a React component
@@ -24,10 +31,10 @@ const Logo = styled.img.attrs({
 export default function MainTemplate(props) {
   const {width, height, variables} = props;
   const {
-    title = 'Created with React.js',
-    image = background,
-    description
-  } = variables;
+    data: {title, description, image},
+    isValid,
+    errors
+  } = validator.parse(variables);
 
   return (
     <>

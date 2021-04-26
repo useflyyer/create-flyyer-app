@@ -17,16 +17,26 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue';
 import {TemplateProps} from '@flayyer/flayyer-types';
+import {Variable as V, Static} from '@flayyer/variables';
 
-import background from '../static/background.jpeg';
 import logo from '../static/logo.svg';
+import background from '../static/background.jpeg';
+import alternative from '../static/alternative.jpeg';
 
-interface Variables {
-  title: string;
-  description: string;
-  logo: string;
-  image: string;
-}
+/**
+ * Export to enable variables UI on Flayyer.com
+ */
+export const schema = V.Object({
+  title: V.String({default: 'Created with Vue.js'}),
+  description: V.Optional(V.String()),
+  image: V.Image({
+    title: 'Background image URL',
+    examples: [alternative],
+    default: background
+  })
+});
+type Variables = Static<typeof schema>;
+
 export default Vue.extend({
   props: {
     width: {type: Number, required: true},
