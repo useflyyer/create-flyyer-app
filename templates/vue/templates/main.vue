@@ -16,9 +16,24 @@
 
 <script>
 import Vue from 'vue';
+import {Variable as V} from '@flayyer/variables';
 
-import background from '../static/background.jpeg';
 import logo from '../static/logo.svg';
+import background from '../static/background.jpeg';
+import alternative from '../static/alternative.jpeg';
+
+/**
+ * Export to enable variables UI on Flayyer.com
+ */
+export const schema = V.Object({
+  title: V.String({default: 'Created with Vue.js'}),
+  description: V.Optional(V.String()),
+  image: V.Image({
+    title: 'Background image URL',
+    examples: [alternative],
+    default: background
+  })
+});
 
 export default Vue.extend({
   props: {

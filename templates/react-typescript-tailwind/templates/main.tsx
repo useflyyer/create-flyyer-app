@@ -1,30 +1,39 @@
 import React from 'react';
+import {Variable as V, Validator, Static} from '@flayyer/variables';
 import {TemplateProps} from '@flayyer/flayyer-types';
-import clsx from 'clsx';
 
 import '../styles/tailwind.css';
 
-import background from '../static/background.jpeg';
 import logo from '../static/logo.svg';
+import background from '../static/background.jpeg';
+import alternative from '../static/alternative.jpeg';
 
-function Layer({className, ...props}: React.ComponentPropsWithoutRef<'div'>) {
-  return (
-    <div
-      {...props}
-      className={clsx('absolute inset-0 w-full h-full', className)}
-    />
-  );
-}
+import {Layer} from '../components/layers';
+
+/**
+ * Export to enable variables UI on Flayyer.com
+ */
+export const schema = V.Object({
+  title: V.String({default: 'Created with React.js and Tailwind'}),
+  description: V.Optional(V.String()),
+  image: V.Image({
+    title: 'Background image URL',
+    examples: [alternative],
+    default: background
+  })
+});
+type Variables = Static<typeof schema>;
+
+const validator = new Validator(schema);
 
 // Make sure to 'export default' a React component
-export default function MainTemplate(props: TemplateProps) {
+export default function MainTemplate(props: TemplateProps<Variables>) {
   const {width, height, variables} = props;
-  const {
-    title = 'Created with React.js',
-    image = background,
-    description
-  } = variables;
+  if (!validator.validate(variables)) {
+    return <img className="w-full h-full object-cover" src={background} />; // Fallback for invalid variables
+  }
 
+  const {title, description, image} = variables;
   return (
     <>
       <Layer>

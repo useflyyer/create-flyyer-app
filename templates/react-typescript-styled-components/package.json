@@ -9,7 +9,8 @@
     "format": "xo --fix"
   },
   "dependencies": {
-    "@flayyer/flayyer-types": "^1.7.1",
+    "@flayyer/flayyer-types": "^1.11.0",
+    "@flayyer/variables": "^1.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.1.1"
@@ -30,6 +31,7 @@
     "space": 2,
     "extends": "xo-react",
     "rules": {
+      "new-cap": "off",
       "no-unused-vars": "off",
       "react/prop-types": "off",
       "react/function-component-definition": "off"
