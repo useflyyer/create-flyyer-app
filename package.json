@@ -59,7 +59,7 @@
     "tslib": "^2.2.0"
   },
   "devDependencies": {
-    "@flayyer/eslint-config": "^1.0.6",
+    "@flayyer/eslint-config": "^1.1.1",
     "@oclif/dev-cli": "^1.26.0",
     "@types/debug": "^4.1.5",
     "@types/dedent": "^0.7.0",
