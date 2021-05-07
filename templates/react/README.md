@@ -74,7 +74,7 @@ Sure. Install `npm install --save sass` and just import your SASS/SCSS files jus
 
 ### Custom fonts
 
-Refer to https://docs.flayyer.com/docs/features/fonts. If you are building a template for the marketplace and want to support on-the-fly fonts you can use: [flayyer/use-googlefonts](https://github.com/flayyer/use-googlefonts).
+Refer to https://docs.flayyer.com/docs/features/fonts. If you are building a template for the community and want to support on-the-fly fonts you can use: [flayyer/use-googlefonts](https://github.com/flayyer/use-googlefonts).
 
 ### Nested directories
 
