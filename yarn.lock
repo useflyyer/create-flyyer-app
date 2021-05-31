@@ -245,10 +245,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@flayyer/eslint-config@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@flayyer/eslint-config/-/eslint-config-1.1.2.tgz#d316208383832cb35d93e957fa4e475956c1901f"
-  integrity sha512-eIBsrhua+zk78mjJFc31ZKrhXtTNqtjaP8nXrLvPYd+PXqC9xA6d4hg6WuOoz/VqYi9k1gKKi4N2TiWpwUagog==
+"@flayyer/eslint-config@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@flayyer/eslint-config/-/eslint-config-1.1.3.tgz#0456c0a000e103f6a0a0d9516ea40766f7aceb92"
+  integrity sha512-p9B3CrcjFi/Aqvp5PMS1dklV9Zv731feC4Ut4bZ52jvVJ+UTCXeHGdm7LkChxIoBAIuCYsPcE9cmlJ/T/J9ocg==
   dependencies:
     "@babel/core" "^7.14.3"
     "@babel/eslint-parser" "^7.14.4"
