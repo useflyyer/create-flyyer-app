@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@flayyer/flayyer-types": "^1.11.1",
-    "@flayyer/variables": "^1.3.0",
+    "@flayyer/variables": "^1.5.1",
     "clsx": "^1.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -39,6 +39,9 @@
       "no-unused-vars": "off",
       "react/prop-types": "off",
       "react/function-component-definition": "off",
+      "unicorn/prefer-module": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/triple-slash-reference": "off",
       "@typescript-eslint/no-unused-vars": "off"
     }
   }

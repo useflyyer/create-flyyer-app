@@ -11,6 +11,6 @@ module.exports = config({
   // Optionals
   name: '{{ replace-title }}',
   description: 'Created with create-flayyer-app',
-  private: true, // set to false to deploy publicly to https://flayyer.com/community
-  sizes: ['THUMBNAIL', 'BANNER', 'SQUARE', 'STORY'] // declare supported sizes
+  private: true, // Set to false to deploy publicly to https://flayyer.com/community
+  sizes: ['THUMBNAIL', 'BANNER', 'SQUARE', 'STORY'] // Declare supported sizes
 });
