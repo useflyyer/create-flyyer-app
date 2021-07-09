@@ -3,20 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "flayyer start",
-    "build": "flayyer build",
-    "deploy": "flayyer deploy",
+    "start": "flyyer start",
+    "build": "flyyer build",
+    "deploy": "flyyer deploy",
     "format": "xo --fix"
   },
   "dependencies": {
-    "@flayyer/flayyer-types": "^1.11.1",
-    "@flayyer/variables": "^1.5.1",
+    "@flyyer/types": "^2.0.2",
+    "@flyyer/variables": "^2.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "@flayyer/cli": "{{ replace-cli-version }}",
+    "@flyyer/cli": "{{ replace-cli-version }}",
     "dotenv": "^10.0.0",
     "eslint-config-xo-react": "^0.25.0",
     "eslint-plugin-react": "^7.23.1",

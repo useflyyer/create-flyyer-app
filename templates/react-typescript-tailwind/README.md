@@ -1,6 +1,6 @@
 # 🌠 {{ replace-title }}
 
-Feel free to checkout the latest documentation at [docs.flayyer.com](https://docs.flayyer.com) 📖
+Feel free to checkout the latest documentation at [docs.flyyer.io](https://docs.flyyer.io) 📖
 
 ## Development
 
@@ -13,9 +13,9 @@ npm run start
 npm run start --port 3000 --host 0.0.0.0
 ```
 
-Then preview your template at [https://flayyer.github.io/flayyer-studio](https://flayyer.github.io/flayyer-studio)
+Then preview your template at [https://useflyyer.github.io/studio](https://useflyyer.github.io/studio)
 
-[![flayyer-studio screenshot](https://raw.githubusercontent.com/flayyer/flayyer-studio/main/.github/screenshot.png)](https://flayyer.github.io/flayyer-studio)
+[![flyyer-studio screenshot](https://raw.githubusercontent.com/flyyer/studio/main/.github/screenshot.png)](https://useflyyer.github.io/studio)
 
 ## Deployment
 
@@ -25,18 +25,18 @@ Once you are ready to deploy to production please remember to build the project 
 NODE_ENV=production npm run build
 ```
 
-Get your Flayyer key from [https://flayyer.com/dashboard/_/settings](https://flayyer.com/dashboard/_/settings) and set it as an environment variable:
+Get your Flyyer key from [https://flyyer.io/dashboard/_/settings](https://flyyer.io/dashboard/_/settings) and set it as an environment variable:
 
 ```sh
 # in your terminal
-export FLAYYER_KEY=...
+export FLYYER_KEY=...
 ```
 
 Alternatively you can create a `.env` file:
 
 ```sh
 # .env
-FLAYYER_KEY=...
+FLYYER_KEY=...
 ```
 
 Deploy to production
@@ -45,24 +45,24 @@ Deploy to production
 npm run deploy
 ```
 
-You can find the live URL for your deck in the terminal output, it is something like: `https://flayyer.io/v2/tenant/deck/template`.
+You can find the live URL for your deck in the terminal output, it is something like: `https://cdn.flyyer.io/render/v2/tenant/deck/template`.
 
 ## Usage
 
 Append queryparams to your URLs and we will set those as props when rendering.
 
-![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-1.png?raw=true)
+![Resultant flyyer live image](https://github.com/useflyyer/create-flyyer-app/blob/master/.github/assets/result-1.png?raw=true)
 
-![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-2.png?raw=true)
+![Resultant flyyer live image](https://github.com/useflyyer/create-flyyer-app/blob/master/.github/assets/result-2.png?raw=true)
 
 Next steps:
 
-* Use our official libraries to format URLs https://docs.flayyer.com/docs/libraries
-* Read our guides to integrate this into your software: https://docs.flayyer.com/guides
+* Use our official libraries to format URLs https://docs.flyyer.io/docs/libraries
+* Read our guides to integrate this into your software: https://docs.flyyer.io/guides
 
 ## FAQ & Caveats
 
-### What is Flayyer studio?
+### What is Flyyer studio?
 
 It's a browser app that opens your local server (localhost:7777) in multiple _iframes_ so you can have a better developer experience. It works best on Firefox.
 
@@ -70,11 +70,11 @@ It's a browser app that opens your local server (localhost:7777) in multiple _if
 
 Sure. Install `npm install --save sass` and just import your SASS/SCSS files just like: `import "/styles.scss"`.
 
-> See: https://docs.flayyer.com/docs/features/styles
+> See: https://docs.flyyer.io/docs/features/styles
 
 ### Custom fonts
 
-Refer to https://docs.flayyer.com/docs/features/fonts. If you are building a template for the community and want to support on-the-fly fonts you can use: [flayyer/use-googlefonts](https://github.com/flayyer/use-googlefonts).
+Refer to https://docs.flyyer.io/docs/features/fonts. If you are building a template for the community and want to support on-the-fly fonts you can use: [flyyer/use-googlefonts](https://github.com/useflyyer/use-googlefonts).
 
 ### Nested directories
 

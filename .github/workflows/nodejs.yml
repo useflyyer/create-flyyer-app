@@ -26,4 +26,4 @@ jobs:
     - run: yarn run prepack
     - run: yarn run test
     - run: yarn link
-    - run: yarn create flayyer-app temporal-directory --template=react
+    - run: yarn create flyyer-app temporal-directory --template=react

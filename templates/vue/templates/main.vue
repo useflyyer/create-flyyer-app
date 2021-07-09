@@ -16,14 +16,14 @@
 
 <script>
 import Vue from 'vue';
-import {Variable as V} from '@flayyer/variables';
+import {Variable as V} from '@flyyer/variables';
 
 import logo from '../static/logo.svg';
 import background from '../static/background.jpeg';
 import alternative from '../static/alternative.jpeg';
 
 /**
- * Export to enable variables UI on Flayyer.com
+ * Export to enable variables UI on Flyyer.io
  */
 export const schema = V.Object({
   title: V.String({default: 'Created with Vue.js'}),

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {Variable as V, Validator, Static} from '@flayyer/variables';
-import {TemplateProps} from '@flayyer/flayyer-types';
+import {Variable as V, Validator, Static} from '@flyyer/variables';
+import {TemplateProps} from '@flyyer/types';
 
 import {Background, Fade, Content} from '../components/layers';
 import {Title, Description} from '../components/elements';
@@ -11,7 +11,7 @@ import background from '../static/background.jpeg';
 import alternative from '../static/alternative.jpeg';
 
 /**
- * Export to enable variables UI on Flayyer.com
+ * Export to enable variables UI on Flyyer.io
  */
 export const schema = V.Object({
   title: V.String({default: 'Created with React.js'}),
