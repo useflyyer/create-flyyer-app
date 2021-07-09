@@ -1,6 +1,6 @@
 import React from 'react';
-import {Variable as V, Validator} from '@flayyer/variables';
-import {TemplateProps} from '@flayyer/flayyer-types';
+import {Variable as V, Validator} from '@flyyer/variables';
+import {TemplateProps} from '@flyyer/types';
 
 import {Background, Fade, Content} from '../components/layers.js';
 import {Title, Description} from '../components/elements.js';
@@ -10,7 +10,7 @@ import background from '../static/background.jpeg';
 import alternative from '../static/alternative.jpeg';
 
 /**
- * Export to enable variables UI on Flayyer.com
+ * Export to enable variables UI on Flyyer.io
  */
 export const schema = V.Object({
   title: V.String({default: 'Created with React.js'}),
@@ -26,7 +26,7 @@ const validator = new Validator(schema);
 
 /**
  * Make sure to default export a React component
- * @param {TemplateProps} [props] - Flayyer props.
+ * @param {TemplateProps} [props] - Flyyer props.
  */
 export default function MainTemplate(props) {
   const {width, height, variables} = props;

@@ -3,18 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "flayyer start",
-    "build": "flayyer build",
-    "deploy": "flayyer deploy",
+    "start": "flyyer start",
+    "build": "flyyer build",
+    "deploy": "flyyer deploy",
     "format": "xo --fix"
   },
   "dependencies": {
-    "@flayyer/flayyer-types": "^1.11.1",
-    "@flayyer/variables": "^1.5.1",
+    "@flyyer/types": "^2.0.2",
+    "@flyyer/variables": "^2.0.1",
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@flayyer/cli": "{{ replace-cli-version }}",
+    "@flyyer/cli": "{{ replace-cli-version }}",
     "@vue/component-compiler-utils": "^3.2.0",
     "dotenv": "^10.0.0",
     "eslint-config-xo-typescript": "^0.42.0",

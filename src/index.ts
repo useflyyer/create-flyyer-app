@@ -18,8 +18,8 @@ const CHOICES = fs.readdirSync(TEMPLATES_DIR).filter((name) => {
   return fs.lstatSync(path.join(TEMPLATES_DIR, name)).isDirectory();
 });
 
-class CreateFlayyerApp extends Command {
-  static description = "create a new flayyer project";
+class CreateFlyyerApp extends Command {
+  static description = "create a new flyyer project";
 
   static flags = {
     // add --version flag to show CLI version
@@ -32,7 +32,7 @@ class CreateFlayyerApp extends Command {
 
   async run(): Promise<void> {
     debug("cli version is: %s", this.config.version);
-    const { args, flags } = this.parse(CreateFlayyerApp);
+    const { args, flags } = this.parse(CreateFlyyerApp);
 
     const response = await prompt<{ name: string; template: string }>([
       {
@@ -76,7 +76,7 @@ class CreateFlayyerApp extends Command {
     }
     fs.mkdirSync(destination);
 
-    const SKIP_FILES = ["node_modules", ".flayyer-cache", ".flayyer-dist", ".flayyer-processed", ".flayyer-dev"];
+    const SKIP_FILES = ["node_modules", ".flyyer-cache", ".flyyer-dist", ".flyyer-processed", ".flyyer-dev"];
     const replace = {
       "replace-slug": slug,
       "replace-title": titleCase(slug),
@@ -110,9 +110,9 @@ class CreateFlayyerApp extends Command {
 
         ${chalk.bold(`NODE_ENV=production npm run build && npm run deploy`)}
 
-      Remember to setup your 'FLAYYER_KEY' environment variable.
-      Forgot your key? Go to https://flayyer.com/dashboard/_/settings
-      First time using Flayyer? Create an account at https://flayyer.com/get-started
+      Remember to setup your 'FLYYER_KEY' environment variable.
+      Forgot your key? Go to https://flyyer.io/dashboard/_/settings
+      First time using Flyyer? Create an account at https://flyyer.io/get-started
     `);
 
     debug("exiting oclif");
@@ -120,4 +120,4 @@ class CreateFlayyerApp extends Command {
   }
 }
 
-export = CreateFlayyerApp;
+export = CreateFlyyerApp;

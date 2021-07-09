@@ -4,7 +4,7 @@
 
 /*
  * Most of the tailwindcss styles are defined with `rem` units which depends on the global font-size.
- * The default is 16px but we think 52px is a better value for Flayyer templates. Feel free to try different values.
+ * The default is 16px but we think 52px is a better value for Flyyer templates. Feel free to try different values.
  */
 html {
   font-size: 52px;

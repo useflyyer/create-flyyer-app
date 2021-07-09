@@ -1,9 +1,9 @@
 import createDebug, { Debugger } from "debug";
 
 /**
- * To enable use: `DEBUG=flayyer:* yarn dev`
+ * To enable use: `DEBUG=flyyer:* yarn dev`
  */
-export const base: Debugger = createDebug("flayyer:create-flayyer-app");
+export const base: Debugger = createDebug("flyyer:create-flyyer-app");
 
 export function namespaced(...namespaces: string[]): Debugger {
   if (namespaces.length > 0) {
