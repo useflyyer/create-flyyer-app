@@ -1,1 +1,1 @@
-/// <reference types="@flyyer/flyyer-types/global" />
+/// <reference types="@flyyer/types/global" />
