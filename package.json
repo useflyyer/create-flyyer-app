@@ -1,7 +1,7 @@
 {
   "name": "create-flyyer-app",
   "description": "Create Flyyer.io app",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Patricio López Juri @lopezjurip",
   "bin": {
     "create-flyyer-app": "./bin/run"
