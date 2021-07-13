@@ -18,6 +18,7 @@
 import Vue, { PropType } from 'vue';
 import {TemplateProps} from '@flyyer/types';
 import {Variable as V, Static} from '@flyyer/variables';
+import {proxy} from '@flyyer/proxy';
 
 import logo from '../static/logo.svg';
 import background from '../static/background.jpeg';
@@ -33,7 +34,8 @@ export const schema = V.Object({
     title: 'Background image URL',
     examples: [alternative],
     default: background
-  })
+  }),
+  logo: V.Image({default: logo})
 });
 type Variables = Static<typeof schema>;
 
@@ -51,10 +53,10 @@ export default Vue.extend({
       return this.variables.description;
     },
     logo() {
-      return this.variables.logo || logo;
+      return proxy(this.variables.logo || logo);
     },
     image() {
-      return this.variables.image || background;
+      return proxy(this.variables.image || background);
     }
   }
 });
@@ -95,8 +97,6 @@ export default Vue.extend({
 .logo {
   width: 280px;
   margin: 1.4rem;
-  /* Apply white filter */
-  filter: brightness(0) invert(1);
 }
 
 .title {

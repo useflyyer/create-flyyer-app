@@ -17,6 +17,7 @@
 <script>
 import Vue from 'vue';
 import {Variable as V} from '@flyyer/variables';
+import {proxy} from '@flyyer/proxy';
 
 import logo from '../static/logo.svg';
 import background from '../static/background.jpeg';
@@ -32,7 +33,8 @@ export const schema = V.Object({
     title: 'Background image URL',
     examples: [alternative],
     default: background
-  })
+  }),
+  logo: V.Image({default: logo})
 });
 
 export default Vue.extend({
@@ -49,10 +51,10 @@ export default Vue.extend({
       return this.variables.description;
     },
     logo() {
-      return this.variables.logo || logo;
+      return proxy(this.variables.logo || logo);
     },
     image() {
-      return this.variables.image || background;
+      return proxy(this.variables.image || background);
     }
   }
 });
@@ -93,8 +95,6 @@ export default Vue.extend({
 .logo {
   width: 280px;
   margin: 1.4rem;
-  /* Apply white filter */
-  filter: brightness(0) invert(1);
 }
 
 .title {

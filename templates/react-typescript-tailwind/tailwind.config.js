@@ -89,14 +89,7 @@ module.exports = {
       ...defaultTheme.screens
     }
   },
-  variants: {
-    /* Enable dark-mode for v2.1 filters. */
-    extend: {
-      filter: ['dark'],
-      brightness: ['dark'],
-      invert: ['dark']
-    }
-  },
+  variants: {},
   plugins: [
     /* Some useful plugins: */
     // require('@tailwindcss/line-clamp'),

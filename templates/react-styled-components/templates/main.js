@@ -1,11 +1,13 @@
 import React from 'react';
 import {Variable as V, Validator} from '@flyyer/variables';
 import {TemplateProps} from '@flyyer/types';
+import {proxy} from '@flyyer/proxy';
 
 import {Background, Fade, Content} from '../components/layers.js';
 import {Title, Description} from '../components/elements.js';
 import {Logo} from '../components/logo.js';
 
+import logo from '../static/logo.svg';
 import background from '../static/background.jpeg';
 import alternative from '../static/alternative.jpeg';
 
@@ -19,7 +21,8 @@ export const schema = V.Object({
     title: 'Background image URL',
     examples: [alternative],
     default: background
-  })
+  }),
+  logo: V.Image({default: logo})
 });
 
 const validator = new Validator(schema);
@@ -29,19 +32,22 @@ const validator = new Validator(schema);
  * @param {TemplateProps} [props] - Flyyer props.
  */
 export default function MainTemplate(props) {
-  const {width, height, variables} = props;
+  const {width, height, variables, locale = 'en'} = props;
   const {
-    data: {title, description, image},
+    data: {title, description, image, logo},
     isValid,
     errors
   } = validator.parse(variables);
+  if (!isValid) {
+    console.error('[Flyyer Variables]:', errors);
+  }
 
   return (
     <>
-      <Background src={image} />
+      <Background src={proxy(image)} />
       <Fade />
       <Content>
-        <Logo />
+        <Logo src={proxy(logo)} />
         <Title>{title}</Title>
         {description && <Description>{description}</Description>}
       </Content>

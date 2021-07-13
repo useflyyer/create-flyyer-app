@@ -7,6 +7,4 @@ export const Logo = styled.img.attrs({
 })`
   width: 280px;
   margin: 1.4rem;
-  /* Apply white filter */
-  filter: brightness(0) invert(1);
 `;
