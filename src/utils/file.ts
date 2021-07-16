@@ -1,6 +1,10 @@
 import fs from "fs";
 import path from "path";
 
+import { namespaced } from "./debug";
+
+const debug = namespaced("utils:file");
+
 // eslint-disable-next-line max-params
 export function recursiveCopy(
   templatePath: string,
@@ -13,7 +17,11 @@ export function recursiveCopy(
     return string.split(search).join(replace);
   }
 
+  debug("executing function [recursiveCopy] with: %s -> %s", templatePath, targetPath);
+
   function createDirectoryContents(templatePath: string, targetPath: string) {
+    debug("executing inner function [createDirectoryContents] with: %s -> %s", templatePath, targetPath);
+
     // read all files/folders (1 level) from template folder
     const filesToCreate = fs.readdirSync(templatePath);
 
@@ -25,19 +33,28 @@ export function recursiveCopy(
       const stats = fs.statSync(origFilePath);
 
       // skip files that should not be copied
-      if (skipFiles.includes(fileName)) continue;
+      if (skipFiles.includes(fileName)) {
+        debug("file was included in 'skipFiles' so will be ignored: %s", fileName);
+        continue;
+      }
 
       if (stats.isFile()) {
         const ext = path.extname(origFilePath);
         const destFileName = rename[fileName] ? rename[fileName]! : fileName;
         const writePath = path.join(targetPath, destFileName);
 
+        debug("file '%s' will be copied to", origFilePath, writePath);
+
+        // TODO: Find a better way of identifying blob files.
         if ([".png", ".jpeg", ".jpg", ".svg"].includes(ext)) {
+          debug("file '%s' will be copied directly as blob", origFilePath);
           fs.copyFileSync(origFilePath, writePath);
         } else {
+          debug("file '%s' will read as text", origFilePath);
           // read file content and transform it using template engine
           let contents = fs.readFileSync(origFilePath, "utf8");
 
+          debug("will replace values (if needed): %o", replace);
           for (const [key, value] of Object.entries(replace)) {
             contents = replaceAll(contents, `{{ ${key} }}`, value);
           }

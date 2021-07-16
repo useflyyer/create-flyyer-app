@@ -83,7 +83,11 @@ class CreateFlyyerApp extends Command {
       "replace-cli-version": "^2.0.1", // TODO: find a way of getting this value
       "replace-create-version": this.config.version,
     };
-    const rename = { ".npmignore": ".gitignore" }; // For some (bold) reason, npm renames .gitignores to .npmignores
+    const rename = {
+      // NPM for some reason ignores .gitignore files
+      ".npmignore": ".gitignore",
+      ".gitignore.template": ".gitignore",
+    };
     debug("replacement values: %o", replace);
     debug("rename values: %o", rename);
     debug("skip files: %o", SKIP_FILES);
